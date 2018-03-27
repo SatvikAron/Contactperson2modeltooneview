@@ -22,5 +22,7 @@ namespace CompanyContact.Data
             // For example, you can rename the ASP.NET Identity table names and more.
             // Add your customizations after calling base.OnModelCreating(builder);
         }
+        public DbSet<ContactPerson> ContactPerson{ get; set; }
+        public DbSet<Company> companies { get; set; }
     }
 }

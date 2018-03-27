@@ -1,7 +1,30 @@
-﻿@{
+﻿
+@model IEnumerable<object>
+@{
+    List<Company> acompany = Model.ToList()[0] as List<Company>;
+    List<ContactPerson> acontactperson = Model.ToList()[1] as List<ContactPerson>;
+
+}
+
+<h1>Company Name</h1>
+<ul>
+    @foreach (var item in acompany)
+    {
+        <li>@item.CompanyName</li>
+    }
+</ul>
+<h1> Contact person Name</h1>
+<ul>
+    @foreach (var item in acontactperson)
+    {
+        <li>@item.FirstName @item.LasttName @item.Email @item.PhoneNumver</li>
+
+    }
+</ul>
+@{
     ViewData["Title"] = "About";
 }
 <h2>@ViewData["Title"]</h2>
 <h3>@ViewData["Message"]</h3>
 
-<p>Use this area to provide additional information.</p>
+<p>Use this arrea provide two table  information in one table</p>
